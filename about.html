@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About Us — PennyRecruiters</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#ffffff; --ink-soft:#c0cde0; --paper:#0a0e27; --panel:#0f1535;
+    --accent:#00C2FF; --accent-soft:#0e2e3f; --accent-deep:#00b8e6;
+    --slate:#9ca3af; --line:#1a2847; --au-color:#9ca3af; --dr-color:#00C2FF;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 32px;}
+
+  .nav{display:flex;justify-content:space-between;align-items:center;padding:16px 32px;background:#070B1A;border-bottom:1px solid rgba(255,255,255,.1);}
+  .nav .wrap{display:flex;justify-content:space-between;align-items:center;width:100%;max-width:1060px;margin:0 auto;padding:0;}
+  .logo{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:17px;letter-spacing:.02em;color:#fff;text-decoration:none;}
+  .tag{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);border:1px solid rgba(255,255,255,.2);padding:6px 12px;border-radius:20px;}
+
+  .hero{padding:64px 0 40px;border-bottom:1px solid var(--line);position:relative;}
+  .hero::before{content:"";position:absolute;top:0;right:0;width:280px;height:280px;background-image:radial-gradient(var(--line) 1.4px,transparent 1.4px);background-size:16px 16px;opacity:.55;pointer-events:none;mask-image:linear-gradient(to bottom left,black,transparent 70%);}
+  .eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;display:flex;align-items:center;gap:10px;}
+  .eyebrow::before{content:"";width:22px;height:1px;background:var(--accent);display:inline-block;}
+  h1{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:42px;line-height:1.16;margin:0 0 20px;max-width:820px;letter-spacing:-.01em;}
+  .hero-sub{font-size:17px;color:var(--slate);max-width:660px;line-height:1.65;margin-bottom:8px;}
+
+  section{padding:54px 0;border-bottom:1px solid var(--line);}
+  section:last-of-type{border-bottom:none;}
+  .section-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;flex-wrap:wrap;gap:8px;}
+  .num-marker{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);letter-spacing:.1em;}
+  h2{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:28px;margin:2px 0 6px;color:var(--ink);}
+  .section-intro{color:var(--slate);font-size:15px;max-width:720px;line-height:1.65;margin-bottom:26px;}
+  .section-intro strong{color:var(--ink);}
+
+  .values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .value-card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:28px 24px;}
+  .value-card h3{font-family:'Plus Jakarta Sans',sans-serif;font-size:17px;font-weight:700;margin:0 0 10px;color:var(--ink);}
+  .value-card p{font-size:14px;color:var(--slate);line-height:1.6;margin:0;}
+
+  .team-note{font-size:15px;color:var(--slate);line-height:1.7;max-width:760px;margin-bottom:28px;}
+  .team-note strong{color:var(--ink);}
+
+  footer{padding:40px 0 60px;background:#070B1A;}
+  .foot-row{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px;}
+  .foot-logo{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:18px;color:#fff;}
+  .foot-note{font-size:12px;color:rgba(255,255,255,.5);max-width:460px;line-height:1.6;}
+
+  @media(max-width:720px){
+    h1{font-size:30px;}
+    .values-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<div class="nav"><div class="wrap">
+  <a href="index.html" style="display:flex;align-items:center;gap:8px;text-decoration:none;color:rgba(255,255,255,.6);font-family:'Inter',sans-serif;font-size:12px;letter-spacing:.06em;text-transform:uppercase;">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Back to PennyRecruiters
+  </a>
+  <a href="index.html" class="logo">PennyRecruiters</a>
+  <div class="tag">About Us</div>
+</div></div>
+
+<div class="wrap">
+  <section class="hero" style="border-bottom:none;">
+    <div class="eyebrow">About PennyRecruiters</div>
+    <h1>Global talent, massive impact — built on trust, transparency, and results.</h1>
+    <p class="hero-sub">We connect elite Pakistani professionals with ambitious businesses worldwide.</p>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="num-marker">01 — Our Mission</span></div>
+    <h2>Our Mission: Global Talent, Massive Impact</h2>
+    <p class="section-intro">Connecting elite Pakistani professionals with ambitious businesses worldwide.</p>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="num-marker">02 — Our Story</span></div>
+    <h2>Our Story</h2>
+    <p class="section-intro">PennyRecruiters was founded with a simple belief: exceptional talent exists everywhere, but opportunity doesn't. We set out to bridge that gap by connecting highly skilled Pakistani professionals with global businesses looking for dedicated, cost-effective team members.</p>
+    <p class="section-intro">What started as a small network of vetted engineers has grown into a platform that has placed thousands of professionals across customer support, development, marketing, and more. We combine rigorous vetting with ongoing support to ensure every placement delivers lasting impact.</p>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="num-marker">03 — Our Values</span></div>
+    <h2>Our Values</h2>
+    <p class="section-intro">The principles that guide every decision we make.</p>
+    <div class="values-grid">
+      <div class="value-card">
+        <h3>Quality</h3>
+        <p>Every candidate passes rigorous technical and soft-skill assessments. We only present the top 1% of talent.</p>
+      </div>
+      <div class="value-card">
+        <h3>Transparency</h3>
+        <p>No hidden fees, no surprises. Clear pricing, open communication, and honest reporting from day one.</p>
+      </div>
+      <div class="value-card">
+        <h3>Speed</h3>
+        <p>We deliver candidate shortlists within 48 hours and have you fully staffed in under two weeks.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="num-marker">04 — Our Team</span></div>
+    <h2>Our Team</h2>
+    <div class="team-note">We are a distributed team spread across Pakistan, the US, and Europe. Our local presence in Pakistan gives us deep access to the talent pool, while our global team ensures we understand your business needs. From sourcers and recruiters to account managers and compliance experts — every member of PennyRecruiters is committed to your success.</div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-row">
+      <div class="foot-logo">PennyRecruiters</div>
+      <div class="foot-note">Connecting elite Pakistani professionals with ambitious businesses worldwide.</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

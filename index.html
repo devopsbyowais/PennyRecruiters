@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PennyRecruiters | Global Staff Augmentation — Hire Top Talent from Pakistan</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 36 36%22><rect width=%2236%22 height=%2236%22 rx=%228%22 fill=%22%23070B1A%22/><path d=%22M18 8c-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6z%22 fill=%22%2300C2FF%22/><path d=%22M18 20c-5.5 0-10 4.5-10 10h20c0-5.5-4.5-10-10-10z%22 fill=%22%2300C2FF%22 opacity=%22.7%22/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.14.1/cdn.min.js"></script>
+  <style>
+    [x-cloak]{display:none!important}
+    html{scroll-behavior:smooth}
+    section[id]{scroll-margin-top:5.5rem}
+    body{font-family:'Inter',sans-serif;background:#070B1A;color:#fff}
+    .font-display{font-family:'Plus Jakarta Sans',sans-serif}
+    .text-accent{color:#00C2FF}
+    .bg-accent{background-color:#00C2FF}
+    .hover\:bg-accent-dark:hover{background-color:#00b8e6}
+    .border-accent{border-color:#00C2FF}
+    .bg-navy{background-color:#070B1A}
+    .bg-navy-50{background-color:#0a0e27}
+    .bg-navy-100{background-color:#1a2847}
+    .bg-white{background-color:#0f1535!important}
+    .text-navy{color:#ffffff}
+    .text-navy-300{color:#9ca3af}
+    .text-navy-400{color:#a0aec0}
+    .text-navy-500{color:#a0aec0}
+    .border-navy-100{border-color:#1a2847}
+    .border-navy-200{border-color:#2a3a5e}
+    .hover\:bg-navy-50:hover{background-color:#1a2847}
+    .hover\:text-accent:hover{color:#00C2FF}
+    .shadow-card{box-shadow:0 4px 24px -6px rgba(0,0,0,.35)}
+    .shadow-lg{box-shadow:0 12px 40px -8px rgba(0,0,0,.45)}
+    .btn-primary{display:inline-flex;align-items:center;justify-content:center;border-radius:.5rem;background-color:#00C2FF;padding:.75rem 1.5rem;font-size:.875rem;font-weight:600;color:#fff;transition:.15s}
+    .btn-primary:hover{background-color:#00b8e6}
+    .btn-outline{display:inline-flex;align-items:center;justify-content:center;border-radius:.5rem;border:1.5px solid #2a3a5e;padding:.75rem 1.5rem;font-size:.875rem;font-weight:600;color:#ffffff;transition:.15s}
+    .btn-outline:hover{border-color:#ffffff;background-color:#1a2847}
+    .btn-outline-accent{display:inline-flex;align-items:center;justify-content:center;border-radius:.5rem;border:1.5px solid #00C2FF;padding:.75rem 1.5rem;font-size:.875rem;font-weight:600;color:#00C2FF;transition:.15s}
+    .btn-outline-accent:hover{background-color:#00C2FF;color:#fff}
+    .section-eyebrow{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#00C2FF}
+    .solution-card{transition:all .2s}
+    .solution-card:hover{transform:translateY(-3px);box-shadow:0 16px 48px -12px rgba(0,0,0,.55)}
+    .pricing-role-row{transition:background .15s}
+    .switch{position:relative;display:inline-block;width:50px;height:28px;flex-shrink:0}
+    .switch input{opacity:0;width:0;height:0}
+    .slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background-color:#2a3a5e;transition:.3s;border-radius:28px}
+    .slider:before{position:absolute;content:"";height:22px;width:22px;left:3px;bottom:3px;background-color:#fff;transition:.3s;border-radius:50%}
+    input:checked+.slider{background-color:#00C2FF}
+    input:checked+.slider:before{transform:translateX(22px)}
+    .pricing-label{margin-bottom:2px}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+    .animate-fade{animation:fadeIn .3s ease-out}
+    @media(max-width:639px){
+      .pricing-row-grid{grid-template-columns:1fr 1fr}
+    }
+  </style>
+</head>
+<body x-data="app()">
+
+  <!-- ============ HEADER ============ -->
+  <header class="sticky top-0 z-50 bg-navy backdrop-blur border-b border-white/10">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+      <a href="#" class="flex items-center gap-2.5" @click.prevent="window.scrollTo({top:0,behavior:'smooth'})">
+        <span class="block font-display text-lg font-bold"><span class="text-white">Penny</span><span style="color:#00C2FF">Recru<svg width="0.38em" height="1em" viewBox="0 0 8 16" style="display:inline;vertical-align:-0.15em;overflow:visible;" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="2" height="11" fill="#00C2FF" rx="0.5"/><circle cx="4" cy="2" r="1.5" fill="#fff"/></svg>ters</span></span>
+      </a>
+
+      <nav class="hidden items-center gap-8 text-sm font-medium text-navy-300 lg:flex">
+        <a href="#pricing" class="hover:text-white transition-colors">Pricing</a>
+        <a href="#process" class="hover:text-white transition-colors">Our Process</a>
+        <a href="#case-studies" class="hover:text-white transition-colors">Case Studies</a>
+        <a href="about.html" class="hover:text-white transition-colors">About Us</a>
+        <a href="#cta" class="hover:text-white transition-colors">Contact</a>
+      </nav>
+
+      <a href="https://calendly.com/netaisystems/30min" class="btn-primary hidden lg:inline-flex">Build My Team</a>
+
+      <button @click="mobileOpen = !mobileOpen" class="lg:hidden text-navy-300" :aria-expanded="mobileOpen" aria-label="Toggle menu">
+        <svg x-show="!mobileOpen" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg x-show="mobileOpen" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" x-cloak><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+
+    <div x-show="mobileOpen" x-cloak x-transition.opacity class="lg:hidden border-t border-white/10 bg-navy px-6 py-4">
+      <nav class="flex flex-col gap-4 text-sm font-medium text-navy-300">
+        <a href="#pricing" @click="mobileOpen=false" class="py-1 hover:text-white">Pricing</a>
+        <a href="#process" @click="mobileOpen=false" class="py-1 hover:text-white">Our Process</a>
+        <a href="#case-studies" @click="mobileOpen=false" class="py-1 hover:text-white">Case Studies</a>
+        <a href="about.html" @click="mobileOpen=false" class="py-1 hover:text-white">About Us</a>
+        <a href="#cta" @click="mobileOpen=false" class="py-1 hover:text-white">Contact</a>
+        <a href="https://calendly.com/netaisystems/30min" class="btn-primary mt-2 w-full text-center" @click="mobileOpen=false">Build My Team</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="overflow-hidden bg-white">
+    <div class="mx-auto grid max-w-7xl items-center gap-12 px-6 py-16 lg:grid-cols-2 lg:px-8 lg:py-24">
+      <div>
+        <p class="section-eyebrow mb-4">Global Talent, Local Impact</p>
+        <h1 class="font-display text-4xl font-extrabold leading-tight text-navy sm:text-5xl lg:text-[56px] lg:leading-[1.1]">
+          Hire Elite Professionals.<br>
+          <span class="text-accent">Scale Faster.</span><br>
+          Pay Less.
+        </h1>
+        <p class="mt-5 max-w-lg text-base leading-relaxed text-navy-400">
+          Hire dedicated professionals from Pakistan starting at <strong class="text-navy">$875/month</strong>. Build high-performing remote teams that integrate seamlessly with your business — no overhead, no hassle, just results.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="https://calendly.com/netaisystems/30min" class="btn-primary">Build My Team</a>
+          <a href="https://calendly.com/netaisystems/30min" class="btn-outline">Book Free Consultation</a>
+        </div>
+        <div class="mt-10 flex flex-wrap gap-x-8 gap-y-4 text-sm text-navy-500">
+          <div class="flex items-center gap-2">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2"><path d="M12 8v4l3 3" stroke-linecap="round"/><circle cx="12" cy="12" r="9"/></svg>
+            24/7 Operations
+          </div>
+          <div class="flex items-center gap-2">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2"><circle cx="9" cy="8" r="3"/><path d="M2 20c0-3.3 3.1-6 7-6s7 2.7 7 6" stroke-linecap="round"/><path d="M16 10a3 3 0 100-6 3 3 0 000 6z"/></svg>
+            Top 1% Talent
+          </div>
+          <div class="flex items-center gap-2">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Secure & Compliant
+          </div>
+          <div class="flex items-center gap-2">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 3v3M16 3v3" stroke-linecap="round"/></svg>
+            Hire in <span class="font-semibold text-navy">72 Hours</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative mx-auto w-full max-w-md lg:max-w-none">
+        <div class="absolute -inset-4 rounded-full bg-cyan-500/10 blur-3xl"></div>
+        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=500&fit=crop" alt="Business team meeting" class="relative h-[380px] w-full rounded-3xl object-cover shadow-lg lg:h-[460px]" loading="lazy">
+
+        <div class="absolute left-0 top-6 flex items-center gap-3 rounded-xl bg-white px-4 py-3 shadow-lg">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-green-100 text-green-600">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <div>
+            <span class="block text-sm font-bold text-navy">98%</span>
+            <span class="block text-xs text-navy-400 whitespace-nowrap">Live Chat Satisfaction</span>
+          </div>
+        </div>
+
+        <div class="absolute right-0 top-28 rounded-xl bg-white px-5 py-4 shadow-lg">
+          <p class="text-xs font-medium text-navy-400">Annual Cost Savings</p>
+          <p class="font-display text-2xl font-bold text-accent">$45K+</p>
+          <svg class="mt-1" width="80" height="24" viewBox="0 0 80 24" fill="none">
+            <polyline points="0,20 15,16 30,18 45,8 60,10 80,4" stroke="#00C2FF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <div class="absolute bottom-6 left-6 flex items-center gap-2 rounded-xl bg-white px-4 py-3 shadow-lg">
+          <div class="flex gap-0.5 text-yellow-400">
+            <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.5-4.9 4.2 1.5 6.3L10 14.9 4.4 17.9l1.5-6.3L1 7.4l6.4-.5z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.5-4.9 4.2 1.5 6.3L10 14.9 4.4 17.9l1.5-6.3L1 7.4l6.4-.5z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.5-4.9 4.2 1.5 6.3L10 14.9 4.4 17.9l1.5-6.3L1 7.4l6.4-.5z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.5-4.9 4.2 1.5 6.3L10 14.9 4.4 17.9l1.5-6.3L1 7.4l6.4-.5z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.5-4.9 4.2 1.5 6.3L10 14.9 4.4 17.9l1.5-6.3L1 7.4l6.4-.5z"/></svg>
+          </div>
+          <span class="text-xs font-semibold text-navy">4.9/5</span>
+          <span class="text-xs text-navy-400 whitespace-nowrap">Company Rating</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STATISTICS ============ -->
+  <section class="bg-navy py-14">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-5">
+        <div class="text-center">
+          <p class="font-display text-3xl font-bold text-white lg:text-4xl">500+</p>
+          <p class="mt-1 text-sm text-navy-300">Professionals Ready to Hire</p>
+        </div>
+        <div class="text-center">
+          <p class="font-display text-3xl font-bold text-white lg:text-4xl">98%</p>
+          <p class="mt-1 text-sm text-navy-300">Client Satisfaction</p>
+        </div>
+        <div class="text-center">
+          <p class="font-display text-3xl font-bold text-white lg:text-4xl">72h</p>
+          <p class="mt-1 text-sm text-navy-300">Average Hire Time</p>
+        </div>
+        <div class="text-center">
+          <p class="font-display text-3xl font-bold text-white lg:text-4xl">3x</p>
+          <p class="mt-1 text-sm text-navy-300">Faster Hiring Than Traditional</p>
+        </div>
+        <div class="text-center md:col-span-3 lg:col-span-1">
+          <p class="font-display text-3xl font-bold text-accent lg:text-4xl">78%</p>
+          <p class="mt-1 text-sm text-navy-300">Average Cost Savings</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SOLUTIONS ============ -->
+  <section id="solutions" class="bg-white py-20">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="section-eyebrow mb-3">Our Services</p>
+        <h2 class="font-display text-3xl font-bold text-navy">Solutions We Offer</h2>
+        <p class="mt-3 text-navy-400">Expert professionals across every function, ready to integrate with your team.</p>
+      </div>
+
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="solution-card rounded-2xl border border-navy-100 bg-white p-6 shadow-card">
+          <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-500/20">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2"><path d="M4 13a8 8 0 0116 0" stroke-linecap="round"/><rect x="2" y="13" width="4" height="6" rx="1"/><rect x="18" y="13" width="4" height="6" rx="1"/><path d="M20 19a4 4 0 01-4 4h-2" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold text-navy">Customer Support</h3>
+          <ul class="mt-4 space-y-2.5 text-sm text-navy-400">
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> Live Chat Support</li>
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> Email Support</li>
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> Phone Support</li>
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> Technical Support</li>
+          </ul>
+        </div>
+
+        <div class="solution-card rounded-2xl border border-navy-100 bg-white p-6 shadow-card">
+          <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-green-500/20">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3M13 6l-2 12" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold text-navy">Developers</h3>
+          <ul class="mt-4 space-y-2.5 text-sm text-navy-400">
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> Frontend Developers</li>
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> Backend Developers</li>
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> Full Stack Developers</li>
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> Mobile Developers</li>
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> QA Engineers</li>
+          </ul>
+        </div>
+
+        <div class="solution-card rounded-2xl border border-navy-100 bg-white p-6 shadow-card">
+          <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-purple-500/20">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2"><rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9 4V3a1 1 0 011-1h4a1 1 0 011 1v1M9 10h6M9 14h6M9 18h3" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold text-navy">DevOps</h3>
+          <ul class="mt-4 space-y-2.5 text-sm text-navy-400">
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> AWS Engineers</li>
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> Azure Engineers</li>
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> Docker & Kubernetes</li>
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> CI/CD Pipelines</li>
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> Infrastructure</li>
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> Monitoring</li>
+          </ul>
+        </div>
+
+        <div class="solution-card rounded-2xl border border-navy-100 bg-white p-6 shadow-card">
+          <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-pink-500/20">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#DB2777" stroke-width="2"><path d="M3 11v2a2 2 0 002 2h1l3 4v-4h2l6-4V7l-6-4H8v4H5a2 2 0 00-2 2z" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold text-navy">Marketing</h3>
+          <ul class="mt-4 space-y-2.5 text-sm text-navy-400">
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> SEO Specialists</li>
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> Google Ads Experts</li>
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> Social Media Managers</li>
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> Content Writers</li>
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> Graphic Designers</li>
+          </ul>
+        </div>
+
+        <div class="solution-card rounded-2xl border border-navy-100 bg-white p-6 shadow-card">
+          <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-500/20">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2"><path d="M3 17l6-6 4 4 8-8M21 7v6M21 7h-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold text-navy">Virtual Assistants</h3>
+          <ul class="mt-4 space-y-2.5 text-sm text-navy-400">
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> Executive Assistants</li>
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> Data Entry</li>
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> Research</li>
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> Scheduling</li>
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> Administrative Support</li>
+          </ul>
+        </div>
+
+        <div class="solution-card rounded-2xl border border-navy-100 bg-white p-6 shadow-card">
+          <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-teal-500/20">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2"><circle cx="9" cy="8" r="3"/><path d="M2 20c0-3.3 3.1-6 7-6s7 2.7 7 6" stroke-linecap="round"/><path d="M16 4l4 4-4 4M13 8h7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold text-navy">Recruiting</h3>
+          <ul class="mt-4 space-y-2.5 text-sm text-navy-400">
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> Technical Recruiters</li>
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> Talent Acquisition</li>
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> Sourcing Specialists</li>
+            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> HR Assistants</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-10 text-center">
+        <a href="developers.html" class="btn-primary">Explore All Roles</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRICING CALCULATOR ============ -->
+  <section id="pricing" class="bg-navy-50 py-20">
+    <div class="mx-auto max-w-5xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="section-eyebrow mb-3">Pricing</p>
+        <h2 class="font-display text-3xl font-bold text-navy">Build Your Team, Estimate Costs</h2>
+        <p class="mt-3 text-navy-400">Add roles and quantities to see your estimated monthly and yearly hiring costs instantly.</p>
+      </div>
+
+      <div class="mt-10 rounded-2xl border border-navy-100 bg-white p-6 shadow-card lg:p-8">
+        <div class="mb-6 flex flex-wrap items-center justify-between gap-4">
+          <div class="flex items-center gap-3">
+            <span class="text-sm font-medium text-navy-500" x-text="pricingMode === 'monthly' ? 'Monthly' : 'Yearly'"></span>
+            <label class="switch" :aria-label="'Switch to ' + (pricingMode === 'monthly' ? 'yearly' : 'monthly') + ' pricing'">
+              <input type="checkbox" @change="togglePricingMode()" :checked="pricingMode === 'yearly'">
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div class="flex items-center gap-4">
+            <template x-if="!showCoupon">
+              <span class="text-sm">💰 <a href="#" @click.prevent="showCoupon=true" class="text-accent hover:underline">Have a coupon?</a></span>
+            </template>
+            <span x-show="showCoupon" x-cloak class="flex items-center gap-2 animate-fade">
+              <input x-model="couponCode" @keyup.enter="applyCoupon" type="text" placeholder="Enter coupon" class="w-32 rounded-md border border-navy-200 px-3 py-1.5 text-sm focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent">
+              <button @click="applyCoupon" type="button" class="rounded-md bg-accent px-3 py-1.5 text-sm font-medium text-white hover:bg-accent-dark transition-colors">Apply</button>
+              <button @click="showCoupon=false; couponCode=''; couponDiscount=0" type="button" class="text-xs text-navy-400 hover:text-navy">✕</button>
+            </span>
+          </div>
+        </div>
+
+        <template x-for="(row, idx) in roles" :key="idx">
+          <div class="pricing-role-row mb-3 rounded-xl border border-navy-100 p-4 hover:bg-navy-50 animate-fade">
+            <div class="grid grid-cols-2 gap-y-4 gap-x-3 sm:grid-cols-12 sm:gap-4">
+              <div class="col-span-2 sm:col-span-3">
+                <label class="pricing-label block text-xs font-medium text-navy-400">Role</label>
+                <select x-model="row.role" @change="calc()" class="w-full rounded-md border border-navy-200 bg-white px-3 py-2 text-sm text-navy focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent">
+                  <option value="customer-support">Customer Support</option>
+                  <option value="developer">Developer</option>
+                  <option value="devops">DevOps Engineer</option>
+                  <option value="marketing">Marketing Expert</option>
+                  <option value="va">Virtual Assistant</option>
+                  <option value="recruiter">Recruiter</option>
+                  <option value="sales">Sales Specialist</option>
+                  <option value="finance">Finance & Accounting</option>
+                </select>
+              </div>
+              <div>
+                <label class="pricing-label block text-xs font-medium text-navy-400">Qty</label>
+                <div class="flex items-center gap-1">
+                  <button @click="decQty(idx)" type="button" class="flex h-9 w-9 items-center justify-center rounded-lg border border-navy-200 bg-white text-navy hover:bg-navy-50 transition-colors">−</button>
+                  <span class="w-8 text-center text-sm font-semibold text-navy" x-text="row.qty"></span>
+                  <button @click="incQty(idx)" type="button" class="flex h-9 w-9 items-center justify-center rounded-lg border border-navy-200 bg-white text-navy hover:bg-navy-50 transition-colors">+</button>
+                </div>
+              </div>
+              <div>
+                <label class="pricing-label block text-xs font-medium text-navy-400">Pakistan <span x-text="pricingMode === 'yearly' ? '/yr' : '/mo'"></span></label>
+                <p class="mt-1 text-sm font-semibold text-navy" x-text="'$' + formatNum(pricingMode === 'yearly' ? row.pakMonthly * 12 : row.pakMonthly)"></p>
+              </div>
+              <div>
+                <label class="pricing-label block text-xs font-medium text-navy-400">USA <span x-text="pricingMode === 'yearly' ? '/yr' : '/mo'"></span></label>
+                <p class="mt-1 text-sm font-semibold text-navy-400" x-text="'$' + formatNum(pricingMode === 'yearly' ? row.usaMonthly * 12 : row.usaMonthly)"></p>
+              </div>
+              <div class="col-span-2 sm:col-span-1 flex items-end justify-end">
+                <button @click="removeRole(idx)" type="button" class="text-sm text-red-500 hover:text-red-700 transition-colors" x-show="roles.length > 1">✕ Remove</button>
+              </div>
+            </div>
+          </div>
+        </template>
+
+        <div class="mt-4 flex flex-wrap gap-3">
+          <button @click="addRole" type="button" class="flex items-center gap-1.5 rounded-lg border-2 border-dashed border-navy-200 px-5 py-2.5 text-sm font-medium text-navy-500 hover:border-accent hover:text-accent transition-colors">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg>
+            Add Another Role
+          </button>
+        </div>
+
+        <div class="mt-8 rounded-xl bg-navy p-6 text-white lg:p-8">
+          <div class="grid gap-6 sm:grid-cols-3">
+            <div>
+              <p class="text-xs text-navy-300">Your Cost <span x-text="pricingMode === 'yearly' ? '(Yearly)' : '(Monthly)'"></span></p>
+              <p class="font-display text-3xl font-bold" x-text="'$' + formatNum(pakTotal)"></p>
+            </div>
+            <div>
+              <p class="text-xs text-navy-300">USA Equivalent</p>
+              <p class="font-display text-3xl font-bold text-navy-300" x-text="'$' + formatNum(usaTotal)"></p>
+            </div>
+            <div>
+              <p class="text-xs text-navy-300">You Save</p>
+              <p class="font-display text-3xl font-bold text-accent" x-text="'$' + formatNum(savings)"></p>
+              <p class="text-xs text-green-400" x-show="volumeDiscount > 0" x-cloak>Includes <span x-text="volumeDiscount"></span>% volume discount</p>
+              <p class="text-xs text-green-400" x-show="couponDiscount > 0" x-cloak>Plus <span x-text="couponDiscount"></span>% coupon discount</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 text-center">
+          <a href="#cta" class="btn-primary">Submit a Hiring Request</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SOURCE & QUALIFY ============ -->
+  <section id="qualify" class="bg-white py-20">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="section-eyebrow mb-3">Our Process</p>
+        <h2 class="font-display text-3xl font-bold text-navy">How We Source &amp; Qualify Talent</h2>
+        <p class="mt-3 text-navy-400">Every candidate meets a rigorous bar before they ever speak to you.</p>
+      </div>
+
+      <div class="mt-12 grid gap-8 md:grid-cols-3">
+        <div class="rounded-2xl border border-navy-100 bg-white p-6 shadow-card">
+          <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10">
+            <span class="font-display text-xl font-bold text-accent">01</span>
+          </div>
+          <h3 class="font-display text-lg font-bold text-navy">Sourcing &amp; Screening</h3>
+          <ul class="mt-4 space-y-3 text-sm text-navy-400">
+            <li class="flex items-start gap-2.5"><span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> We tap our pre-vetted network of 10,000+ Pakistani professionals</li>
+            <li class="flex items-start gap-2.5"><span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> Role-specific skill assessments &amp; portfolio review</li>
+            <li class="flex items-start gap-2.5"><span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> English proficiency test (written &amp; verbal)</li>
+            <li class="flex items-start gap-2.5"><span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> Background &amp; reference checks</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl border border-navy-100 bg-white p-6 shadow-card">
+          <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10">
+            <span class="font-display text-xl font-bold text-accent">02</span>
+          </div>
+          <h3 class="font-display text-lg font-bold text-navy">Technical &amp; Domain Validation</h3>
+          <ul class="mt-4 space-y-3 text-sm text-navy-400">
+            <li class="flex items-start gap-2.5"><span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> Hands-on technical test tailored to your stack</li>
+            <li class="flex items-start gap-2.5"><span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> Domain-specific case study or situational interview</li>
+            <li class="flex items-start gap-2.5"><span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> Soft-skills &amp; communication evaluation</li>
+            <li class="flex items-start gap-2.5"><span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> Culture-fit assessment with your team lead</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl border border-navy-100 bg-white p-6 shadow-card">
+          <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10">
+            <span class="font-display text-xl font-bold text-accent">03</span>
+          </div>
+          <h3 class="font-display text-lg font-bold text-navy">Onboarding &amp; Quality Assurance</h3>
+          <ul class="mt-4 space-y-3 text-sm text-navy-400">
+            <li class="flex items-start gap-2.5"><span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> Dedicated account manager for first 30 days</li>
+            <li class="flex items-start gap-2.5"><span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> Weekly performance reviews &amp; milestone tracking</li>
+            <li class="flex items-start gap-2.5"><span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> Instant replacement guarantee if expectations aren't met</li>
+            <li class="flex items-start gap-2.5"><span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span> Ongoing training &amp; upskilling at no extra cost</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-16">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="section-eyebrow mb-3">Quality Standards</p>
+          <h2 class="font-display text-3xl font-bold text-navy">Minimum Qualifications We Require</h2>
+          <p class="mt-3 text-navy-400">Every PennyRecruiters professional meets these non-negotiable standards.</p>
+        </div>
+
+        <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="rounded-xl bg-navy-50 p-6 text-center">
+            <p class="font-display text-4xl font-bold text-accent">4+</p>
+            <p class="mt-1 text-sm font-semibold text-navy">Years Experience</p>
+            <p class="mt-1 text-xs text-navy-400">Industry-specific experience in their domain</p>
+          </div>
+          <div class="rounded-xl bg-navy-50 p-6 text-center">
+            <p class="font-display text-4xl font-bold text-accent">C1</p>
+            <p class="mt-1 text-sm font-semibold text-navy">English Level</p>
+            <p class="mt-1 text-xs text-navy-400">Advanced written &amp; spoken English proficiency</p>
+          </div>
+          <div class="rounded-xl bg-navy-50 p-6 text-center">
+            <p class="font-display text-4xl font-bold text-accent">97%</p>
+            <p class="mt-1 text-sm font-semibold text-navy">Retention Rate</p>
+            <p class="mt-1 text-xs text-navy-400">Our talent stays — average tenure is 2+ years</p>
+          </div>
+          <div class="rounded-xl bg-navy-50 p-6 text-center">
+            <p class="font-display text-4xl font-bold text-accent">&lt;48h</p>
+            <p class="mt-1 text-sm font-semibold text-navy">Match Time</p>
+            <p class="mt-1 text-xs text-navy-400">Average time from request to candidate shortlist</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CASE STUDIES ============ -->
+  <section id="case-studies" class="bg-navy py-20">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="text-xs font-bold uppercase tracking-widest text-accent mb-3">Success Stories</p>
+        <h2 class="font-display text-3xl font-bold text-white">Trusted by Industry Leaders</h2>
+        <p class="mt-3 text-navy-300">See how companies scaled their teams and reduced costs with PennyRecruiters.</p>
+      </div>
+
+      <div class="mt-12 grid gap-6 md:grid-cols-3">
+        <a href="case-study-igate.html" class="group flex flex-col rounded-2xl bg-white/5 border border-white/10 p-6 shadow-card transition-all hover:-translate-y-1 hover:bg-white/10 hover:border-white/20">
+          <div class="flex items-center gap-3">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/20 flex-shrink-0">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="#00C2FF"><path d="M12 2l2.4 7.2H22l-6 4.8 2.4 7.2L12 16l-6.4 5.2L8 14l-6-4.8h7.6z"/></svg>
+            </div>
+            <div>
+              <p class="text-xs font-medium text-accent">2-Month Review</p>
+              <h3 class="font-display text-base font-semibold text-white">iGate Softwares</h3>
+            </div>
+          </div>
+          <p class="mt-4 flex-1 text-sm text-navy-300 leading-relaxed">Built a 15-person remote team spanning IT infrastructure and high-ticket sales closing, saving 81.9% on staffing costs.</p>
+          <div class="mt-5 flex items-center justify-between border-t border-white/10 pt-4">
+            <div>
+              <p class="font-display text-lg font-bold text-accent">$199,800</p>
+              <p class="text-xs text-navy-300">Annual Savings</p>
+            </div>
+            <div class="text-right">
+              <p class="font-display text-lg font-bold text-white">15</p>
+              <p class="text-xs text-navy-300">Team Size</p>
+            </div>
+          </div>
+          <span class="mt-4 flex items-center gap-1 text-sm font-semibold text-accent group-hover:gap-2 transition-all">Read Case Study <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+
+        <a href="case-study-infinitex.html" class="group flex flex-col rounded-2xl bg-white/5 border border-white/10 p-6 shadow-card transition-all hover:-translate-y-1 hover:bg-white/10 hover:border-white/20">
+          <div class="flex items-center gap-3">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/20 flex-shrink-0">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="#00C2FF"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8" stroke="#070B1A" stroke-width="2"/></svg>
+            </div>
+            <div>
+              <p class="text-xs font-medium text-accent">6-Month Review</p>
+              <h3 class="font-display text-base font-semibold text-white">Infinitex Trade</h3>
+            </div>
+          </div>
+          <p class="mt-4 flex-1 text-sm text-navy-300 leading-relaxed">An 8-person offshore acquisition and closing team drove six months of compounding savings at 85.7% cost reduction.</p>
+          <div class="mt-5 flex items-center justify-between border-t border-white/10 pt-4">
+            <div>
+              <p class="font-display text-lg font-bold text-accent">€312,600</p>
+              <p class="text-xs text-navy-300">Annual Savings</p>
+            </div>
+            <div class="text-right">
+              <p class="font-display text-lg font-bold text-white">8</p>
+              <p class="text-xs text-navy-300">Team Size</p>
+            </div>
+          </div>
+          <span class="mt-4 flex items-center gap-1 text-sm font-semibold text-accent group-hover:gap-2 transition-all">Read Case Study <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+
+        <a href="case-study-titan.html" class="group flex flex-col rounded-2xl bg-white/5 border border-white/10 p-6 shadow-card transition-all hover:-translate-y-1 hover:bg-white/10 hover:border-white/20">
+          <div class="flex items-center gap-3">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/20 flex-shrink-0">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="#00C2FF"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 12l2 2 4-4" stroke="#070B1A" stroke-width="2" fill="none"/></svg>
+            </div>
+            <div>
+              <p class="text-xs font-medium text-accent">90-Day Review</p>
+              <h3 class="font-display text-base font-semibold text-white">Titan Anaesthesia</h3>
+            </div>
+          </div>
+          <p class="mt-4 flex-1 text-sm text-navy-300 leading-relaxed">A 14-person remote team covering support, bookkeeping, marketing, creative and outbound calling at 86% cost reduction.</p>
+          <div class="mt-5 flex items-center justify-between border-t border-white/10 pt-4">
+            <div>
+              <p class="font-display text-lg font-bold text-accent">$283,380</p>
+              <p class="text-xs text-navy-300">Annual Savings</p>
+            </div>
+            <div class="text-right">
+              <p class="font-display text-lg font-bold text-white">14</p>
+              <p class="text-xs text-navy-300">Team Size</p>
+            </div>
+          </div>
+          <span class="mt-4 flex items-center gap-1 text-sm font-semibold text-accent group-hover:gap-2 transition-all">Read Case Study <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section id="process" class="bg-navy-50 py-20">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="section-eyebrow mb-3">Our Process</p>
+        <h2 class="font-display text-3xl font-bold text-navy">How We Build Your Team</h2>
+        <p class="mt-3 text-navy-400">A proven 7-step process to get you the right talent, fast.</p>
+      </div>
+
+      <div class="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-7">
+        <div class="relative flex flex-col items-center text-center">
+          <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-white shadow-card">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35" stroke-linecap="round"/></svg>
+          </div>
+          <span class="mt-4 text-xs font-bold uppercase tracking-widest text-accent">Step 1</span>
+          <h3 class="mt-1 font-display text-base font-semibold text-navy">Discovery Call</h3>
+          <p class="mt-2 max-w-[160px] text-sm text-navy-400">We discuss your requirements and business goals.</p>
+          <svg class="absolute right-[-24px] top-6 hidden xl:block" width="48" height="12" viewBox="0 0 48 12" fill="none"><path d="M0 6h42M36 1l6 5-6 5" stroke="#2a3a5e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="relative flex flex-col items-center text-center">
+          <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-white shadow-card">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke-linecap="round"/></svg>
+          </div>
+          <span class="mt-4 text-xs font-bold uppercase tracking-widest text-accent">Step 2</span>
+          <h3 class="mt-1 font-display text-base font-semibold text-navy">Shortlist</h3>
+          <p class="mt-2 max-w-[160px] text-sm text-navy-400">We select suitable candidates for your needs.</p>
+          <svg class="absolute right-[-24px] top-6 hidden xl:block" width="48" height="12" viewBox="0 0 48 12" fill="none"><path d="M0 6h42M36 1l6 5-6 5" stroke="#2a3a5e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="relative flex flex-col items-center text-center">
+          <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-white shadow-card">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2"><path d="M4 5h16v10H9l-5 4z" stroke-linejoin="round"/></svg>
+          </div>
+          <span class="mt-4 text-xs font-bold uppercase tracking-widest text-accent">Step 3</span>
+          <h3 class="mt-1 font-display text-base font-semibold text-navy">Interview</h3>
+          <p class="mt-2 max-w-[160px] text-sm text-navy-400">You interview and select your preferred candidates.</p>
+          <svg class="absolute right-[-24px] top-6 hidden xl:block" width="48" height="12" viewBox="0 0 48 12" fill="none"><path d="M0 6h42M36 1l6 5-6 5" stroke="#2a3a5e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="relative flex flex-col items-center text-center">
+          <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-white shadow-card">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2"><path d="M5 15l3-9 5 4 3-8 3 13" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span class="mt-4 text-xs font-bold uppercase tracking-widest text-accent">Step 4</span>
+          <h3 class="mt-1 font-display text-base font-semibold text-navy">Onboarding</h3>
+          <p class="mt-2 max-w-[160px] text-sm text-navy-400">We handle payroll, HR, contracts and compliance.</p>
+          <svg class="absolute right-[-24px] top-6 hidden xl:block" width="48" height="12" viewBox="0 0 48 12" fill="none"><path d="M0 6h42M36 1l6 5-6 5" stroke="#2a3a5e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="relative flex flex-col items-center text-center">
+          <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-white shadow-card">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2"><path d="M3 17l6-6 4 4 8-8M21 7v6M21 7h-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span class="mt-4 text-xs font-bold uppercase tracking-widest text-accent">Step 5</span>
+          <h3 class="mt-1 font-display text-base font-semibold text-navy">Kickoff</h3>
+          <p class="mt-2 max-w-[160px] text-sm text-navy-400">Your selected team begins working.</p>
+          <svg class="absolute right-[-24px] top-6 hidden xl:block" width="48" height="12" viewBox="0 0 48 12" fill="none"><path d="M0 6h42M36 1l6 5-6 5" stroke="#2a3a5e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="relative flex flex-col items-center text-center">
+          <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-white shadow-card">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span class="mt-4 text-xs font-bold uppercase tracking-widest text-accent">Step 6</span>
+          <h3 class="mt-1 font-display text-base font-semibold text-navy">Scale</h3>
+          <p class="mt-2 max-w-[160px] text-sm text-navy-400">Add more professionals as you grow.</p>
+          <svg class="absolute right-[-24px] top-6 hidden xl:block" width="48" height="12" viewBox="0 0 48 12" fill="none"><path d="M0 6h42M36 1l6 5-6 5" stroke="#2a3a5e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-white shadow-card">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#00C2FF" stroke-width="2"><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9"/></svg>
+          </div>
+          <span class="mt-4 text-xs font-bold uppercase tracking-widest text-accent">Step 7</span>
+          <h3 class="mt-1 font-display text-base font-semibold text-navy">Succeed</h3>
+          <p class="mt-2 max-w-[160px] text-sm text-navy-400">Continuous support ensures long-term success.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section id="cta" class="bg-navy py-20">
+    <div class="mx-auto max-w-3xl px-6 text-center lg:px-8">
+      <h2 class="font-display text-3xl font-bold text-white sm:text-4xl">Build Your Dream Team Today</h2>
+      <p class="mt-4 text-lg text-navy-300">Stop overpaying for local talent. Get dedicated professionals starting at $875/month. Book a free consultation and see how much you can save.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="https://calendly.com/netaisystems/30min" class="btn-primary">Book Free Consultation</a>
+        <a href="#pricing" class="btn-outline-accent">View Pricing</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NEWSLETTER ============ -->
+  <section class="bg-white py-16">
+    <div class="mx-auto max-w-2xl px-6 text-center lg:px-8">
+      <h2 class="font-display text-2xl font-bold text-navy">Stay Updated</h2>
+      <p class="mt-2 text-sm text-navy-400">Get the latest on hiring, global talent trends, and cost-saving tips delivered to your inbox.</p>
+      <form @submit.prevent="newsletterSubscribed=true" class="mt-6 flex max-w-md mx-auto gap-3">
+        <input type="email" required placeholder="Enter your email" class="min-w-0 flex-1 rounded-lg border border-navy-200 px-4 py-2.5 text-sm text-navy focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent" :disabled="newsletterSubscribed">
+        <button type="submit" class="btn-primary shrink-0" x-text="newsletterSubscribed ? 'Subscribed!' : 'Subscribe'" :disabled="newsletterSubscribed"></button>
+      </form>
+      <p x-show="newsletterSubscribed" x-cloak class="mt-3 text-sm text-green-600">Thanks for subscribing! We'll keep you posted.</p>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-navy text-navy-300">
+    <div class="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
+        <div class="sm:col-span-2 lg:col-span-1">
+          <a href="#" @click.prevent="window.scrollTo({top:0,behavior:'smooth'})" class="flex items-center gap-2.5">
+            <svg width="32" height="32" viewBox="0 0 36 36" fill="none">
+              <rect width="36" height="36" rx="8" fill="#fff" opacity=".15"/>
+              <path d="M18 8c-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6z" fill="#00C2FF"/>
+              <path d="M18 20c-5.5 0-10 4.5-10 10h20c0-5.5-4.5-10-10-10z" fill="#00C2FF" opacity=".7"/>
+            </svg>
+            <span class="block font-display text-base font-bold text-white">PennyRecruiters</span>
+          </a>
+          <p class="mt-4 max-w-xs text-sm text-navy-300 leading-relaxed">We connect businesses with elite professionals from Pakistan. Dedicated teams, seamless integration, starting at $875/month.</p>
+        </div>
+
+        <div>
+          <h4 class="font-display text-sm font-semibold text-white">Solutions</h4>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a href="#solutions" class="hover:text-white transition-colors">Customer Support</a></li>
+            <li><a href="#solutions" class="hover:text-white transition-colors">Developers</a></li>
+            <li><a href="#solutions" class="hover:text-white transition-colors">DevOps</a></li>
+            <li><a href="#solutions" class="hover:text-white transition-colors">Marketing</a></li>
+            <li><a href="#solutions" class="hover:text-white transition-colors">Virtual Assistants</a></li>
+            <li><a href="#solutions" class="hover:text-white transition-colors">Recruiting</a></li>
+            <li><a href="#solutions" class="hover:text-white transition-colors">Sales Teams</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-display text-sm font-semibold text-white">Roles</h4>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a href="#solutions" class="hover:text-white transition-colors">Support Agents</a></li>
+            <li><a href="#solutions" class="hover:text-white transition-colors">Developers</a></li>
+            <li><a href="#solutions" class="hover:text-white transition-colors">DevOps Engineers</a></li>
+            <li><a href="#solutions" class="hover:text-white transition-colors">Marketing Experts</a></li>
+            <li><a href="#solutions" class="hover:text-white transition-colors">Virtual Assistants</a></li>
+            <li><a href="#solutions" class="hover:text-white transition-colors">Recruiters</a></li>
+            <li><a href="#solutions" class="hover:text-white transition-colors">Finance & Accounting</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-display text-sm font-semibold text-white">Company</h4>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+            <li><a href="#cta" class="hover:text-white transition-colors">Contact Us</a></li>
+            <li><a href="#process" class="hover:text-white transition-colors">Our Process</a></li>
+            <li><a href="#case-studies" class="hover:text-white transition-colors">Case Studies</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-display text-sm font-semibold text-white">Resources</h4>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a href="#pricing" class="hover:text-white transition-colors">Pricing</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Guides</a></li>
+            <li><a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="terms.html" class="hover:text-white transition-colors">Terms & Conditions</a></li>
+            <li><a href="cookie-policy.html" class="hover:text-white transition-colors">Cookie Policy</a></li>
+            <li><a href="data-processing.html" class="hover:text-white transition-colors">Data Processing</a></li>
+            <li><a href="gdpr-compliance.html" class="hover:text-white transition-colors">GDPR Compliance</a></li>
+            <li><a href="acceptable-use.html" class="hover:text-white transition-colors">Acceptable Use</a></li>
+            <li><a href="refund-policy.html" class="hover:text-white transition-colors">Refund Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10 py-6">
+      <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-6 text-xs text-navy-300 sm:flex-row lg:px-8">
+        <p>&copy; 2024 PennyRecruiters. All rights reserved.</p>
+        <p>Project of <a href="https://netaisystems.com" target="_blank" rel="noopener" class="text-navy-300 hover:text-white transition-colors">NetAiSystems</a> &nbsp;|&nbsp; Email: contact@pennyrecruiters.com &nbsp;|&nbsp; Phone: +1 (770) 710-4500 &nbsp;|&nbsp; www.pennyrecruiters.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const ROLE_PRICES = {
+      'customer-support': { pak: 875, usa: 4480 },
+      'developer': { pak: 1500, usa: 9600 },
+      'devops': { pak: 1800, usa: 11200 },
+      'marketing': { pak: 1200, usa: 6400 },
+      'va': { pak: 875, usa: 4000 },
+      'recruiter': { pak: 1100, usa: 5600 },
+      'sales': { pak: 1400, usa: 7600 },
+      'finance': { pak: 1300, usa: 6800 }
+    };
+
+    function app() {
+      return {
+        mobileOpen: false,
+        newsletterSubscribed: false,
+        openBooking: false,
+        pricingMode: 'monthly',
+        showCoupon: false,
+        couponCode: '',
+        couponDiscount: 0,
+        roles: [
+          { role: 'customer-support', qty: 1, pakMonthly: 875, usaMonthly: 4480 }
+        ],
+        init() {
+          this.calc();
+        },
+        togglePricingMode() {
+          this.pricingMode = this.pricingMode === 'monthly' ? 'yearly' : 'monthly';
+        },
+        addRole() {
+          this.roles.push({ role: 'customer-support', qty: 1, pakMonthly: 875, usaMonthly: 4480 });
+        },
+        removeRole(idx) {
+          if (this.roles.length > 1) {
+            this.roles.splice(idx, 1);
+          }
+        },
+        incQty(idx) {
+          this.roles[idx].qty++;
+        },
+        decQty(idx) {
+          if (this.roles[idx].qty > 1) {
+            this.roles[idx].qty--;
+          }
+        },
+        calc() {
+          this.roles.forEach(r => {
+            const prices = ROLE_PRICES[r.role] || ROLE_PRICES['customer-support'];
+            r.pakMonthly = prices.pak;
+            r.usaMonthly = prices.usa;
+          });
+        },
+        applyCoupon() {
+          const code = this.couponCode.trim().toUpperCase();
+          const discounts = { 'SAVE10': 10, 'SAVE20': 20, 'STARTUP': 15 };
+          this.couponDiscount = discounts[code] || 0;
+          if (!this.couponDiscount && code.length > 0) {
+            alert('Invalid coupon code. Try: SAVE10, SAVE20, or STARTUP');
+          }
+        },
+        get volumeDiscount() {
+          const totalQty = this.roles.reduce((s, r) => s + r.qty, 0);
+          if (totalQty >= 20) return 20;
+          if (totalQty >= 10) return 15;
+          if (totalQty >= 5) return 10;
+          return 0;
+        },
+        get pakTotal() {
+          const raw = this.roles.reduce((s, r) => s + r.pakMonthly * r.qty, 0);
+          const withVol = raw * (1 - this.volumeDiscount / 100);
+          const withCoupon = withVol * (1 - this.couponDiscount / 100);
+          return this.pricingMode === 'yearly' ? Math.round(withCoupon * 12) : Math.round(withCoupon);
+        },
+        get usaTotal() {
+          const raw = this.roles.reduce((s, r) => s + r.usaMonthly * r.qty, 0);
+          return this.pricingMode === 'yearly' ? raw * 12 : raw;
+        },
+        get savings() {
+          return this.usaTotal - this.pakTotal;
+        },
+        formatNum(n) {
+          return n.toLocaleString();
+        }
+      };
+    }
+  </script>
+</body>
+</html>

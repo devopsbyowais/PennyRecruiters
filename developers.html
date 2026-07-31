@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Software Developers — PennyRecruiters</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#ffffff;--ink-soft:#c0cde0;--accent:#00C2FF;--accent-dark:#00b8e6;--slate:#9ca3af;--line:#1a2847;--paper:#0a0e27;}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:1060px;margin:0 auto;padding:0 32px;}
+
+.nav{display:flex;justify-content:space-between;align-items:center;padding:16px 32px;background:#070B1A;border-bottom:1px solid rgba(255,255,255,.1);}
+.nav .wrap{display:flex;justify-content:space-between;align-items:center;width:100%;max-width:1060px;margin:0 auto;padding:0;}
+.logo{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:17px;letter-spacing:.02em;color:#fff;text-decoration:none;}
+.tag{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);border:1px solid rgba(255,255,255,.2);padding:6px 12px;border-radius:20px;}
+
+.hero{padding:40px 0 32px;border-bottom:1px solid var(--line);position:relative;}
+.hero::before{content:"";position:absolute;top:0;right:0;width:280px;height:280px;background-image:radial-gradient(var(--line) 1.4px,transparent 1.4px);background-size:16px 16px;opacity:.55;pointer-events:none;mask-image:linear-gradient(to bottom left,black,transparent 70%);}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;display:flex;align-items:center;gap:10px;}
+.eyebrow::before{content:"";width:22px;height:1px;background:var(--accent);display:inline-block;}
+h1{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:42px;line-height:1.16;margin:0 0 16px;max-width:760px;letter-spacing:-.01em;}
+.hero-sub{font-size:17px;color:var(--slate);max-width:640px;line-height:1.65;margin-bottom:32px;}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-primary{display:inline-flex;align-items:center;justify-content:center;border-radius:.5rem;background:#00C2FF;padding:.75rem 1.5rem;font-size:.875rem;font-weight:600;color:#fff;transition:.15s;text-decoration:none;}
+.btn-primary:hover{background:#00b8e6;}
+.btn-outline{display:inline-flex;align-items:center;justify-content:center;border-radius:.5rem;border:1.5px solid #2a3a5e;padding:.75rem 1.5rem;font-size:.875rem;font-weight:600;color:var(--ink);transition:.15s;text-decoration:none;}
+.btn-outline:hover{border-color:var(--ink);background:#1a2847;}
+
+section{padding:36px 0;border-bottom:1px solid var(--line);}
+section:last-of-type{border-bottom:none;}
+.section-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;flex-wrap:wrap;gap:8px;}
+.num-marker{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);letter-spacing:.1em;}
+h2{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:28px;margin:2px 0 6px;color:var(--ink);}
+.section-intro{color:var(--slate);font-size:15px;max-width:680px;line-height:1.65;margin-bottom:28px;}
+
+.expertise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.expertise-card{background:#0f1535;border:1px solid var(--line);border-radius:12px;padding:28px 24px;}
+.expertise-card h3{font-family:'Plus Jakarta Sans',sans-serif;font-size:16px;font-weight:700;margin:0 0 10px;color:var(--ink);}
+.expertise-card p{font-size:14px;color:var(--slate);line-height:1.6;margin:0;}
+
+.cost-intro{font-size:14px;color:var(--slate);margin-bottom:20px;max-width:700px;line-height:1.6;}
+table{width:100%;border-collapse:collapse;font-size:14px;margin-top:6px;}
+th{text-align:left;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#fff;font-weight:500;padding:12px 14px;background:#070B1A;}
+th:first-child{border-radius:8px 0 0 0;}
+th:last-child{border-radius:0 8px 0 0;}
+td{padding:12px 14px;border-bottom:1px solid var(--line);color:var(--ink-soft);}
+tr:last-child td{border-bottom:none;}
+td.num{text-align:right;font-family:'JetBrains Mono',monospace;}
+tr:nth-child(even) td{background:#101a33;}
+.save-badge{display:inline-block;background:#0e2e3f;color:var(--accent-dark);font-weight:700;padding:3px 10px;border-radius:20px;font-size:12px;}
+
+.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+.why-card{display:flex;gap:16px;align-items:flex-start;padding:24px;border:1px solid var(--line);border-radius:12px;background:var(--paper);}
+.why-card .icon{flex-shrink:0;width:40px;height:40px;border-radius:10px;background:#0e2e3f;display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--accent);font-weight:700;}
+.why-card h3{font-family:'Plus Jakarta Sans',sans-serif;font-size:15px;font-weight:700;margin:0 0 6px;color:var(--ink);}
+.why-card p{font-size:13.5px;color:var(--slate);line-height:1.55;margin:0;}
+
+footer{padding:40px 0 60px;background:#070B1A;}
+.foot-row{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px;}
+.foot-logo{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:18px;color:#fff;}
+.foot-note{font-size:12px;color:rgba(255,255,255,.5);max-width:460px;line-height:1.6;}
+
+@media(max-width:720px){
+  h1{font-size:30px;}
+  .expertise-grid{grid-template-columns:1fr;}
+  .why-grid{grid-template-columns:1fr;}
+  .hero-actions{flex-direction:column;}
+}
+</style>
+</head>
+<body>
+
+<div class="nav"><div class="wrap">
+  <a href="index.html" style="display:flex;align-items:center;gap:8px;text-decoration:none;color:rgba(255,255,255,.6);font-family:'Inter',sans-serif;font-size:12px;letter-spacing:.06em;text-transform:uppercase;">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Back to PennyRecruiters
+  </a>
+  <a href="index.html" class="logo">PennyRecruiters</a>
+  <div class="tag">Developers</div>
+</div></div>
+
+<div class="wrap">
+  <section class="hero" style="border-bottom:none;">
+    <div class="eyebrow">Software Developers</div>
+    <h1>Skilled Software Developers</h1>
+    <p class="hero-sub">Access top-tier development talent from Pakistan. Full-stack, frontend, backend, and mobile experts ready to build your next product.</p>
+
+  </section>
+
+  <section>
+    <div class="section-head"><span class="num-marker">01 — Expertise</span></div>
+    <h2>Full-Stack Development Expertise</h2>
+    <p class="section-intro">Our developers are proficient in modern frameworks and technologies across the entire stack.</p>
+    <div class="expertise-grid">
+      <div class="expertise-card">
+        <h3>Frontend Development</h3>
+        <p>React, Vue, Angular, and modern JavaScript/TypeScript. Pixel-perfect responsive UIs with exceptional user experience.</p>
+      </div>
+      <div class="expertise-card">
+        <h3>Backend Development</h3>
+        <p>Node.js, Python, Ruby, Go, and PHP. Scalable APIs, microservices, and serverless architectures tailored to your needs.</p>
+      </div>
+      <div class="expertise-card">
+        <h3>Mobile Development</h3>
+        <p>React Native, Flutter, Swift, and Kotlin. Cross-platform and native apps that perform beautifully on every device.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="num-marker">02 — Cost Comparison</span></div>
+    <h2>See How Much You Save</h2>
+    <p class="cost-intro">PennyRecruiters delivers premium development talent at a fraction of US costs.</p>
+    <table>
+      <thead><tr><th>Role</th><th class="num">USA (Avg. Cost)</th><th class="num">PennyRecruiters</th><th class="num">You Save</th></tr></thead>
+      <tbody>
+        <tr><td>Frontend Developer</td><td class="num">$7,500/mo</td><td class="num">$1,450/mo</td><td class="num"><span class="save-badge">81%</span></td></tr>
+        <tr><td>Backend Developer</td><td class="num">$8,500/mo</td><td class="num">$1,550/mo</td><td class="num"><span class="save-badge">82%</span></td></tr>
+        <tr><td>Full Stack Developer</td><td class="num">$9,000/mo</td><td class="num">$1,650/mo</td><td class="num"><span class="save-badge">82%</span></td></tr>
+        <tr><td>React Developer</td><td class="num">$8,000/mo</td><td class="num">$1,500/mo</td><td class="num"><span class="save-badge">81%</span></td></tr>
+        <tr><td>Python Developer</td><td class="num">$8,200/mo</td><td class="num">$1,500/mo</td><td class="num"><span class="save-badge">82%</span></td></tr>
+        <tr><td>Node.js Developer</td><td class="num">$8,000/mo</td><td class="num">$1,500/mo</td><td class="num"><span class="save-badge">81%</span></td></tr>
+        <tr><td>Mobile App Developer</td><td class="num">$8,500/mo</td><td class="num">$1,600/mo</td><td class="num"><span class="save-badge">81%</span></td></tr>
+        <tr><td>Software Developer</td><td class="num">$8,000/mo</td><td class="num">$1,550/mo</td><td class="num"><span class="save-badge">81%</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="num-marker">03 — Why Choose Us</span></div>
+    <h2>Why Choose Our Developers?</h2>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="icon">✓</div>
+        <div>
+          <h3>Modern Tech Stack</h3>
+          <p>Expertise in React, Node.js, Python, AWS, Docker, and more. Our developers stay current with the latest industry trends.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="icon">✓</div>
+        <div>
+          <h3>Agile & Scrum</h3>
+          <p>Our developers work within your sprint cycles, participate in stand-ups, and use Jira, Asana, or your preferred tool.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="icon">✓</div>
+        <div>
+          <h3>Quality Code</h3>
+          <p>Code reviews, testing, and CI/CD pipelines built in. We ship clean, maintainable code that your team will love.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="icon">✓</div>
+        <div>
+          <h3>Time Zone Overlap</h3>
+          <p>Pakistan Standard Time overlaps with US business hours, enabling real-time collaboration during your workday.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-row">
+      <div class="foot-logo">PennyRecruiters</div>
+      <div class="foot-note">Prepared for prospective clients — a detailed look at the software development talent available through PennyRecruiters.</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
